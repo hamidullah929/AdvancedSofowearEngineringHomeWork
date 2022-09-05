@@ -1,4 +1,6 @@
-﻿using System;
+﻿using _00_StrategyDesignPattern._03_Step.FlyingDuck;
+using _00_StrategyDesignPattern._03_Step.QuackingDuck;
+using System;
 
 namespace _00_StrategyDesignPattern._03_Step
 {
@@ -7,8 +9,9 @@ namespace _00_StrategyDesignPattern._03_Step
         static void Main(string[] args)
         {
 
-            MallerDuck malled = new MallerDuck();
-
+            Duck malled = new MallerDuck();
+            malled.setQuackBehavior(new Quack());
+            malled.setFlyBehavior(new FlynoWay());
             malled.performQuack();
             malled.performFly();
            

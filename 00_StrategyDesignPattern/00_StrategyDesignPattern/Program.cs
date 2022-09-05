@@ -1,15 +1,17 @@
 ﻿using System;
 
-namespace _00_StrategyDesignPattern
+namespace _00_StrategyDesignPattern._03_Step
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var MDuck = new MallerDuck();
-            MDuck.Display();
-            var readHead = new ReadheadDuck();
-            readHead.quack();
+
+            MallerDuck malled = new MallerDuck();
+
+            malled.performQuack();
+            malled.performFly();
+           
             Console.WriteLine("Hello World!");
         }
     }

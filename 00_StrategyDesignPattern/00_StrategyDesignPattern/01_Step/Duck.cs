@@ -15,7 +15,7 @@ namespace _00_StrategyDesignPattern
         }
          
         public void Fly()
-        {
+        {                   /// add fly to duck classs problem not all duck can fly
             Console.WriteLine("Can Fly");
         }
       

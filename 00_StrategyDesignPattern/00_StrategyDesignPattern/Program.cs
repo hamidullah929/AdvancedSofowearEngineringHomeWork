@@ -9,11 +9,16 @@ namespace _00_StrategyDesignPattern._03_Step
         static void Main(string[] args)
         {
 
-            Duck malled = new MallerDuck();
+            MallerDuck malled = new MallerDuck();
+            malled.Display();
             malled.setQuackBehavior(new Quack());
             malled.setFlyBehavior(new FlynoWay());
             malled.performQuack();
             malled.performFly();
+
+            ReadHeadDuck redheadDuck = new ReadHeadDuck();
+            redheadDuck.Display();
+            redheadDuck.setQuackBehavior(new Squeak());
            
             Console.WriteLine("Hello World!");
         }

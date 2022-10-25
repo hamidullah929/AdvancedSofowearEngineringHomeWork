@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _05_FactoryDesignPattern._02_Step;
+using System;
 
 namespace _05_FactoryDesignPattern
 {
@@ -6,13 +7,12 @@ namespace _05_FactoryDesignPattern
     {
         static void Main(string[] args)
         {
-            var ch = new Chesses();
-            var anar = new AnarPizza();
-            var obj = new OrderPizza();
-            obj.OrderMyPizza(anar);
-            obj.OrderMyPizza(ch);
+            var gr = new GreekPizza();
+            var order = new Order1Pizza();
+            order.Order(gr);
          
             Console.WriteLine("Hello World!");
         }
+
     }
 }

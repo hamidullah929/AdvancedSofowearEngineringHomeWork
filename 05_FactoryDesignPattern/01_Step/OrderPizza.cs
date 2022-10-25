@@ -4,12 +4,17 @@ namespace _05_FactoryDesignPattern{
     public class OrderPizza{
      
  
-        public Pizza  OrderMyPizza(string _pizza)
+        public void  OrderMyPizza(Pizza _pizza)
         {
-            if(Chesses)
+            if(_pizza is Chesses)
             {
-
+                _pizza = new Chesses();
             }
+            if(_pizza is AnarPizza)
+            {
+                _pizza = new AnarPizza();
+            }
+
             _pizza.Prepare();
             _pizza.bake();
             _pizza.Box();
